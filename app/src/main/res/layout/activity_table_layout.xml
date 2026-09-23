@@ -17,7 +17,7 @@
     <TableRow><TextView style="@style/MenuText" android:text="Open..." /><TextView style="@style/MenuText" android:gravity="center_vertical|end" android:text="Ctrl-O" /></TableRow>
     <TableRow><TextView style="@style/MenuText" android:text="Save..." /><TextView style="@style/MenuText" android:gravity="center_vertical|end" android:text="Ctrl-S" /></TableRow>
     <TableRow><TextView style="@style/MenuText" android:text="Save As..." /><TextView style="@style/MenuText" android:gravity="center_vertical|end" android:text="Ctrl-Shift-S" /></TableRow>
-    <View android:layout_height="2dp" android:layout_span="2" android:background="@drawable/menu_divider" />
+    <View android:layout_width="match_parent" android:layout_height="2dp" android:layout_span="2" android:background="@drawable/menu_divider" />
     <TableRow>
         <TextView
             style="@style/MenuText"
@@ -40,6 +40,6 @@
             android:gravity="center_vertical|end"
             android:text="Ctrl-E" />
     </TableRow>
-    <View android:layout_height="2dp" android:layout_span="2" android:background="@drawable/menu_divider" />
+    <View android:layout_width="match_parent" android:layout_height="2dp" android:layout_span="2" android:background="@drawable/menu_divider" />
     <TableRow><TextView style="@style/MenuText" android:text="Quit" /><TextView style="@style/MenuText" android:text="" /></TableRow>
 </TableLayout>
