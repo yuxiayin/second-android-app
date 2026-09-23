@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Android 布局实验</string>
+    <string name="linear_layout_title">实验一：线性布局</string>
+    <string name="table_layout_title">实验二：表格布局</string>
+    <string name="calculator_title">实验三：约束布局计算器</string>
+    <string name="space_title">实验四：约束布局航班页</string>
+    <string name="compose_title">实验五：Compose 任务列表</string>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#242424"
+    android:stretchColumns="0">
+
+    <TableRow android:background="#9A979C">
+        <TextView
+            android:layout_span="2"
+            android:padding="10dp"
+            android:text="Hello TableLayout"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </TableRow>
+    <TableRow><TextView style="@style/MenuText" android:text="Open..." /><TextView style="@style/MenuText" android:gravity="center_vertical|end" android:text="Ctrl-O" /></TableRow>
+    <TableRow><TextView style="@style/MenuText" android:text="Save..." /><TextView style="@style/MenuText" android:gravity="center_vertical|end" android:text="Ctrl-S" /></TableRow>
+    <TableRow><TextView style="@style/MenuText" android:text="Save As..." /><TextView style="@style/MenuText" android:gravity="center_vertical|end" android:text="Ctrl-Shift-S" /></TableRow>
+    <View android:layout_height="2dp" android:layout_span="2" android:background="@drawable/menu_divider" />
+    <TableRow>
+        <TextView
+            style="@style/MenuText"
+            android:paddingStart="0dp"
+            android:text="X Import..." />
+
+        <TextView
+            style="@style/MenuText"
+            android:text="" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            style="@style/MenuText"
+            android:paddingStart="0dp"
+            android:text="X Export..." />
+
+        <TextView
+            style="@style/MenuText"
+            android:gravity="center_vertical|end"
+            android:text="Ctrl-E" />
+    </TableRow>
+    <View android:layout_height="2dp" android:layout_span="2" android:background="@drawable/menu_divider" />
+    <TableRow><TextView style="@style/MenuText" android:text="Quit" /><TextView style="@style/MenuText" android:text="" /></TableRow>
+</TableLayout>

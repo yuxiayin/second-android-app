@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA">
+
+    <ImageView android:id="@+id/station_icon" android:layout_width="38dp" android:layout_height="38dp" android:contentDescription="Space Stations" android:src="@drawable/space_station_icon" app:layout_constraintEnd_toEndOf="@id/station_label" app:layout_constraintStart_toStartOf="@id/station_label" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:id="@+id/station_label" android:layout_width="0dp" android:layout_height="wrap_content" android:gravity="center" android:text="Space Stations" android:textSize="12sp" app:layout_constraintEnd_toStartOf="@id/flight_label" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/station_icon" />
+    <ImageView android:id="@+id/flight_icon" android:layout_width="38dp" android:layout_height="38dp" android:contentDescription="Flights" android:src="@drawable/rocket_icon" app:layout_constraintEnd_toEndOf="@id/flight_label" app:layout_constraintStart_toStartOf="@id/flight_label" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:id="@+id/flight_label" android:layout_width="0dp" android:layout_height="wrap_content" android:gravity="center" android:text="Flights" android:textSize="12sp" app:layout_constraintEnd_toStartOf="@id/rover_label" app:layout_constraintStart_toEndOf="@id/station_label" app:layout_constraintTop_toBottomOf="@id/flight_icon" />
+    <ImageView android:id="@+id/rover_icon" android:layout_width="42dp" android:layout_height="38dp" android:contentDescription="Rovers" android:src="@drawable/rover_icon" app:layout_constraintEnd_toEndOf="@id/rover_label" app:layout_constraintStart_toStartOf="@id/rover_label" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:id="@+id/rover_label" android:layout_width="0dp" android:layout_height="wrap_content" android:gravity="center" android:text="Rovers" android:textSize="12sp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/flight_label" app:layout_constraintTop_toBottomOf="@id/rover_icon" />
+
+    <View android:id="@+id/nav_divider" android:layout_width="0dp" android:layout_height="1dp" android:background="#BDBDBD" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/station_label" />
+
+    <TextView
+        android:id="@+id/origin"
+        android:layout_width="112dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="28dp"
+        android:background="#226B36"
+        android:gravity="center"
+        android:text="DCA"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/destination"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nav_divider" />
+
+    <TextView
+        android:id="@+id/destination"
+        android:layout_width="112dp"
+        android:layout_height="84dp"
+        android:background="#226B36"
+        android:gravity="center"
+        android:text="MARS"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/origin"
+        app:layout_constraintTop_toTopOf="@id/origin" />
+
+    <ImageView android:id="@+id/swap" android:layout_width="58dp" android:layout_height="58dp" android:background="#FFFFFF" android:contentDescription="Swap route" android:padding="8dp" android:src="@drawable/double_arrows" app:layout_constraintBottom_toBottomOf="@id/origin" app:layout_constraintEnd_toStartOf="@id/destination" app:layout_constraintStart_toEndOf="@id/origin" app:layout_constraintTop_toTopOf="@id/origin" />
+
+    <android.widget.Switch android:id="@+id/one_way" android:layout_width="152dp" android:layout_height="48dp" android:layout_marginStart="28dp" android:layout_marginTop="16dp" android:background="#C86D1D" android:checked="true" android:paddingHorizontal="12dp" android:text="One Way" android:textColor="#FFFFFF" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/origin" />
+    <TextView android:id="@+id/travellers" android:layout_width="wrap_content" android:layout_height="44dp" android:layout_marginStart="28dp" android:layout_marginTop="12dp" android:background="#C86D1D" android:gravity="center" android:paddingHorizontal="12dp" android:text="1 Traveller" android:textColor="#FFFFFF" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/one_way" />
+
+    <ImageView
+        android:id="@+id/galaxy"
+        android:layout_width="116dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="22dp"
+        android:contentDescription="Galaxy"
+        android:src="@drawable/galaxy"
+        app:layout_constraintBottom_toBottomOf="@id/rocket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rocket"
+        app:layout_constraintTop_toTopOf="@id/rocket"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/rocket"
+        android:layout_width="18dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="256dp"
+        android:translationY="-20dp"
+        android:contentDescription="Rocket"
+        android:src="@drawable/rocket_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/galaxy"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button android:id="@+id/depart" android:layout_width="0dp" android:layout_height="52dp" android:layout_margin="8dp" android:backgroundTint="#226B36" android:text="DEPART" android:textColor="#FFFFFF" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
